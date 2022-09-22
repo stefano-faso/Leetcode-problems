@@ -1,0 +1,12 @@
+def uniqueItems(nums):
+    count = {}
+    unique = []
+    for items in nums:
+        if items not in count:
+            count[items] = 1
+        else:
+            count[items] += 1
+    for key, val in count.items():
+        if val == 1:
+            unique.append(key)
+    return unique
